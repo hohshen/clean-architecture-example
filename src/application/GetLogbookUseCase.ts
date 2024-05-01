@@ -31,6 +31,6 @@ export class GetLogbookUseCase implements IUseCase<IGetLogbookDto, LogbookDto> {
             throw new Error("not found")
         }
 
-        return logbook
+        return LogbookDto.from(logbook)
     }
 }

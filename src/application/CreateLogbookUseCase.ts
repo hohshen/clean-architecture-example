@@ -11,8 +11,6 @@ export interface ICreateLogbookResult {
   logbookId: string
 }
 
-
-
 export class CreateLogbookUseCase
   implements IUseCase<ICreateLogbookDto, ICreateLogbookResult> {
   public constructor(
