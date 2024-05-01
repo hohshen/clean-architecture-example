@@ -1,9 +1,9 @@
-import { CreateLogbookUseCase } from "./application/CreateLogbookUseCase"
-import { GetLogbookUseCase } from "./application/GetLogbookUseCase"
-import { InMemoryLogbookRepository } from "./infrastructure/InMemoryLogbookRepository"
-import { ApiServer } from "./persentation/ApiServer"
-import { CreateLogbookController } from "./persentation/CreateLogbookController"
-import { GetLogbookController } from "./persentation/GetLogBookController"
+import { CreateLogbookController } from "./logbook/features/create-logbook/CreateLogbookController"
+import { CreateLogbookUseCase } from "./logbook/features/create-logbook/CreateLogbookUseCase"
+import { GetLogbookController } from "./logbook/features/get-logbook/GetLogBookController"
+import { GetLogbookUseCase } from "./logbook/features/get-logbook/GetLogbookUseCase"
+import { ApiServer } from "./logbook/shared/ApiServer"
+import { InMemoryLogbookRepository } from "./logbook/shared/InMemoryLogbookRepository"
 
 export async function main() {
     const inMemoryRepo = new InMemoryLogbookRepository()
