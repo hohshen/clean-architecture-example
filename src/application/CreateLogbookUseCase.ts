@@ -1,4 +1,5 @@
 import { Logbook } from "../domain/Logbook"
+import { IUseCase } from "../shared/IUseCase"
 
 interface ICreateLogbookDto {
   name: string
@@ -14,7 +15,8 @@ export interface ILogbookRepository {
   save(logbook: Logbook): Promise<boolean>
 }
 
-export class CreateLogbookUseCase {
+export class CreateLogbookUseCase
+  implements IUseCase<ICreateLogbookDto, ICreateLogbookResult> {
   public constructor(
     private readonly _logbookRepo: ILogbookRepository
   ) { }
