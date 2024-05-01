@@ -5,7 +5,7 @@ interface ICreateLogbookDto {
   userId: string
 }
 
-interface ICreateLogbookResult {
+export interface ICreateLogbookResult {
   logbookId: string
 }
 
