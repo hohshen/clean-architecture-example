@@ -1,5 +1,6 @@
 import { Logbook } from "../domain/Logbook"
 import { IUseCase } from "../shared/IUseCase"
+import { ILogbookRepository } from "./ILogbookRepository"
 
 interface ICreateLogbookDto {
   name: string
@@ -11,9 +12,6 @@ export interface ICreateLogbookResult {
 }
 
 
-export interface ILogbookRepository {
-  save(logbook: Logbook): Promise<boolean>
-}
 
 export class CreateLogbookUseCase
   implements IUseCase<ICreateLogbookDto, ICreateLogbookResult> {
