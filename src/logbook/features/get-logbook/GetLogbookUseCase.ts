@@ -1,6 +1,6 @@
-import { Logbook } from "../domain/Logbook";
-import { IUseCase } from "../shared/IUseCase";
-import { ILogbookRepository } from "./ILogbookRepository";
+import { Logbook } from "../../domain/Logbook";
+import { IUseCase } from "../../../shared/IUseCase";
+import { ILogbookRepository } from "../../shared/ILogbookRepository";
 
 interface IGetLogbookDto {
     id: string

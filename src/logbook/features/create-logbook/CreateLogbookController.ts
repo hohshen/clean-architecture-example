@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { CreateLogbookUseCase, ICreateLogbookResult } from '../application/CreateLogbookUseCase'
+import { CreateLogbookUseCase, ICreateLogbookResult } from './CreateLogbookUseCase'
 
 export class CreateLogbookDto implements ICreateLogbookResult {
     public readonly logbookId: string
