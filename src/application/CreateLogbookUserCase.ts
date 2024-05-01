@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { Logbook } from "../domain/Logbook"
 
 interface ICreateLogbookDto {
   name: string
@@ -9,15 +9,8 @@ interface ICreateLogbookResult {
   logbookId: string
 }
 
-class Logbook {
-  public constructor(
-    public readonly name: string,
-    public readonly userId: string,
-    public readonly id: string = uuidv4(),
-  ) { }
-}
 
-interface ILogbookRepository {
+export interface ILogbookRepository {
   save(logbook: Logbook): Promise<boolean>
 }
 
